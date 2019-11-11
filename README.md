@@ -4,6 +4,10 @@ Agile Methods for Software Development: Agile Techniques and Agile Usability
 
 ## Setup laravel project
 
+```
+sudo apt update && sudo apt install git php7.2-cli php7.2-curl php7.2-xml php7.2-zip php-mbstring composer nodejs chromium-browser npm
+```
+
 ### Download Composer
 
 https://getcomposer.org/
