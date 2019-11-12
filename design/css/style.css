@@ -1,4 +1,12 @@
 /* Base */
+#idea-section{
+  margin-top:20%;
+}
+#idea-section h2{
+  color: white;
+}
+
+
 body {
   line-height: 1.7;
   color: yellow;
