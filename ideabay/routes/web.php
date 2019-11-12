@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/', function () {
+    return view('create_idea');
+});
+
 Route::get('/welcome', function () {
     return view('welcome');
 });
