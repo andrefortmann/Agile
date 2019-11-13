@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('pages.login', ['name' => 'James']);
 });
 
 Route::get('/create_idea', function () {
