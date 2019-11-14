@@ -1,0 +1,28 @@
+header {
+    .navbar {
+        padding: 1em 5em;
+        background-color: white !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        &.active {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .nav-item {
+        padding-left: 1em;
+
+        a:hover {
+            color: $secondary-color !important;
+        }
+    }
+
+    .btn-outline-success {
+        color: $secondary-color !important;
+        border-color: $secondary-color !important;
+        &:hover {
+            background-color: $secondary-color !important;
+            color: white !important;
+        }
+    }
+}
