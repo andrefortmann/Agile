@@ -16,18 +16,21 @@
     <div id="login-container">
         <div class="row">
             <div class="col login-banner">
-                <div class="d-flex flex-column justify-content-center d-flex justify-content-center">
+                <div class="d-flex flex-column justify-content-center">
                     <h1>Ideabay</h1>
                     <p>The only platform that brings investors and entrepreneurs together. Sign up now to use all features!</p>
                 </div>
             </div>
             <div class="col">
-                <div class="d-flex flex-column justify-content-center d-flex justify-content-center">
+                <div class="d-flex justify-content-center align-items-center">
                     <form class="form-signin" method="POST" action="{{ route('login') }}">
                         @csrf
-                        <div class="text-center mb-4">
-                            <img class="mb-4" src="" alt="" width="72" height="72">
-                            <h1 class="h3 mb-3 font-weight-normal">Start sharing your ideas!</h1>
+                        <div class="mb-5">
+                            <h2>Welcome</h2>
+                            <h2>Sign in to Ideabay</h2>
+                        </div>
+                        <div class="mb-3">
+                            <span>Enter Details</span>
                         </div>
                         <div class="form-label-group">
                             <input type="email" id="inputEmail" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required>
@@ -47,19 +50,8 @@
                                     </span>
                             @enderror
                         </div>
-                        <div class="form-group row">
-                                <div class="col-md-6 offset-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-    
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
                         <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
-                        <p class="mt-5">New to Ideabay? <a href="{{ route('register') }}">{{ __('Register') }}">Create an account.</a></p>
+                        <p class="mt-5">Don't have an account? <a href="{{ route('register') }}">Sign up</a></p>
                     </form>
                 </div>
             </div>
