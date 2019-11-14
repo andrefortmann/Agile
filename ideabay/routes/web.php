@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.homepage');
 });
 
 Route::get('/create_idea', function () {
