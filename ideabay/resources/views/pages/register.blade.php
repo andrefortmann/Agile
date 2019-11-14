@@ -29,6 +29,10 @@
                             <h1 class="h3 mb-3 font-weight-normal">Start sharing your ideas!</h1>
                         </div>
                         <div class="form-label-group">
+                            <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                            <label for="inputUsername">Username</label>
+                        </div>
+                        <div class="form-label-group">
                             <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
                             <label for="inputEmail">Email</label>
                         </div>
@@ -36,8 +40,12 @@
                             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                             <label for="inputPassword">Password</label>
                         </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
-                        <p class="mt-5">New to Ideabay? <a href="/register">Create an account.</a></p>
+                        <div class="form-label-group">
+                            <input type="password" id="inputPasswordRepeat" class="form-control" placeholder="Repeat Password" required>
+                            <label for="inputPasswordRepeat">Repeat Password</label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+                        <p class="mt-5">Already have an account? <a href="/login">Log in.</a></p>
                     </form>
                 </div>
             </div>

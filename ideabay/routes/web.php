@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('pages.login', ['name' => 'James']);
 });
 
+Route::get('/register', function () {
+    return view('pages.register');
+});
+
+Route::get('/login', function () {
+    return view('pages.login');
+});
+
 Route::get('/create_idea', function () {
     return view('create_idea');
 });
