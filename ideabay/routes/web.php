@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/register', function () {
-    return view('pages.register');
-});
-
 Route::get('/create_idea', function () {
     return view('create_idea');
 });
