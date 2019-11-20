@@ -38,6 +38,23 @@ class IdeasController extends Controller
     public function store(Request $request)
     {
         //
+       /**  $this->validate($request, [
+          *  'title' => 'required',
+           * 'abstract' => 'required',
+            *'abstract' => 'description',
+            *'abstract' => 'keyword',
+        *]);
+        */
+
+        $idea = new Idea;
+        $idea->title = $request->input('title');
+        $idea->abstract = $request->input('abstract');
+        $idea->description = $request->input('description');
+        $idea->keyword = $request->input('keyword');
+       // $idea->user_id = auth()->user()->id;
+        $idea->save();
+
+        return redirect('/create_idea')->with('success', 'Post Created');
     }
 
     /**

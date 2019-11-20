@@ -110,6 +110,29 @@
               </div>
 
             </form>
+
+           
+            <h1>Create Post</h1>
+            {!! Form::open(['action' => 'IdeasController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+            <div class="form-group">
+            {{Form::label('title', 'Title')}}
+            {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+            </div>
+            <div class="form-group">
+            {{Form::label('abstract', 'Abstract')}}
+            {{Form::text('abstract', '', ['class' => 'form-control', 'placeholder' => 'Abstract'])}}
+            </div>
+            <div class="form-group">
+            {{Form::label('description', 'Description')}}
+            {{Form::textarea('description', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Description Text'])}}
+            </div>
+            <div class="form-group">
+            {{Form::label('keyword', 'Keyword')}}
+            {{Form::text('keyword', '', ['class' => 'form-control', 'placeholder' => 'Keyword'])}}
+            </div>
+            {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+            {!! Form::close() !!}
+           
             </div>
           </div>
         </div>
