@@ -18,7 +18,7 @@
             <div class="col login-banner">
                 <div class="d-flex justify-content-center align-items-center">
                     <div>
-                        <h1>Ideabay</h1>
+                        <h1><i class="far fa-lightbulb pr-4"></i>Ideabay</h1>
                         <p>We bring investors and entrepreneurs together. <br> Start sharing your ideas today!</p>
                     </div>
                 </div>
@@ -34,16 +34,16 @@
                         <div class="mb-3">
                             <span>Enter Details</span>
                         </div>
-                        <div class="form-label-group">
-                            <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Username" required>
-                            <label for="name">Username</label>
+                        <div class="form-label-group required">
+                            <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Name" required>
+                            <label for="name">Name</label>
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-label-group">
+                        <div class="form-label-group required">
                             <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required>
                             <label for="email">Email</label>
                             @error('email')
@@ -53,6 +53,10 @@
                             @enderror
                         </div>
                         <div class="form-label-group">
+                            <input type="text" id="company" class="form-control" placeholder="Company">
+                            <label for="company">Company</label>
+                        </div>
+                        <div class="form-label-group required">
                             <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required>
                             <label for="password">Password</label>
                             @error('password')
@@ -61,7 +65,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-label-group">
+                        <div class="form-label-group required">
                             <input type="password" id="password-confirm" class="form-control" name="password_confirmation" placeholder="Confirm Password" required>
                             <label for="password-confirm">Confirm Password</label>
                             @error('password')

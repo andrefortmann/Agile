@@ -18,7 +18,7 @@
             <div class="col login-banner">
                 <div class="d-flex justify-content-center align-items-center">
                     <div>
-                        <h1>Ideabay</h1>
+                        <h1><i class="far fa-lightbulb pr-4"></i>Ideabay</h1>
                         <p>We bring investors and entrepreneurs together. <br> Start sharing your ideas today!</p>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                         <div class="mb-3">
                             <span>Enter Details</span>
                         </div>
-                        <div class="form-label-group">
+                        <div class="form-label-group required">
                             <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required>
                             <label for="email">Email</label>
                             @error('email')
@@ -43,7 +43,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-label-group">
+                        <div class="form-label-group required">
                             <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required>
                             <label for="password">Password</label>
                             @error('password')
