@@ -16,9 +16,11 @@
     <div id="login-container">
         <div class="row">
             <div class="col login-banner">
-                <div class="d-flex flex-column justify-content-center">
-                    <h1>Ideabay</h1>
-                    <p>The only platform that brings investors and entrepreneurs together. Sign up now to use all features!</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                        <h1>Ideabay</h1>
+                        <p>We bring investors and entrepreneurs together. <br> Start sharing your ideas today!</p>
+                    </div>
                 </div>
             </div>
             <div class="col">
