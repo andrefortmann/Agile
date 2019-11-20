@@ -4466,6 +4466,7 @@ main {
 
 main h1 {
   margin: 0 2em 1em 2em;
+  font-weight: 700;
 }
 
 #login-container {
