@@ -4460,6 +4460,14 @@ header .btn-outline-success:hover {
   color: white !important;
 }
 
+main {
+  padding: 3em 0 2em 0;
+}
+
+main h1 {
+  margin: 0 2em 1em 2em;
+}
+
 #login-container {
   margin: 0;
   width: 100% !important;
@@ -4573,6 +4581,33 @@ header .btn-outline-success:hover {
 .form-label-group.required label:after {
   content: "*";
   color: red;
+}
+
+.list-ideas {
+  padding: 0 5em;
+}
+
+.list-ideas .card .card-title {
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.list-ideas .card .card-footer {
+  margin-bottom: 0;
+}
+
+.list-ideas .card .badge {
+  color: white;
+  font-size: 0.8em;
+  padding: 0.4em 0.7em;
+}
+
+.list-ideas .card .keywords > * {
+  margin-bottom: 1.2em;
+}
+
+.list-ideas .card .keywords :not(:last-child) {
+  margin-right: 1em;
 }
 
 /*!
