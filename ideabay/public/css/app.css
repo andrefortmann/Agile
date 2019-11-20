@@ -4437,6 +4437,11 @@ header .navbar.active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+header .navbar-brand {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 header .nav-item {
   padding-left: 1em;
 }
