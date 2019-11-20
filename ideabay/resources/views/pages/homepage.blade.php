@@ -2,6 +2,14 @@
 
 @section('content')
 <main>
-    <p> homepage </p>
+    <h1>Ideas</h1>
+    <div class="card-columns list-ideas">
+        @include('partials.card')
+        @include('partials.card')  
+        @include('partials.card')
+        @include('partials.card')
+        @include('partials.card')
+    </div>
 </main>
 @endsection
+
