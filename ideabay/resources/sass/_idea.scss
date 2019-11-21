@@ -1,0 +1,53 @@
+.list-ideas {
+    margin-top: 2em;
+    padding: 0 5em;
+
+    .card {
+        .card-title {
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+
+        .card-footer {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.idea-content {
+    padding: 0 5em;
+
+    span {
+        font-size: 1.3em;
+        color: #818A91;
+    }
+
+    p {
+        margin-top: 2em;
+        text-align: justify;
+    }
+
+    .keywords {
+        margin-top: 1.8em;
+    }
+}
+
+.keywords {
+    >* {
+        margin-bottom: 1.2em;
+    }
+
+    :not(:last-child) {
+        margin-right: 1em;
+    }
+
+    .badge {
+        color: white !important;
+        font-size: 0.8em;
+        padding: 0.4em 0.7em;
+
+        &:hover {
+            color: white !important;
+        }
+    }
+}

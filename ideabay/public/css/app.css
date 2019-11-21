@@ -4465,7 +4465,7 @@ main {
 }
 
 main h1 {
-  margin: 0 2em 1em 2em;
+  margin: 0 2em 0 2em;
   font-weight: 700;
 }
 
@@ -4585,6 +4585,7 @@ main h1 {
 }
 
 .list-ideas {
+  margin-top: 2em;
   padding: 0 5em;
 }
 
@@ -4597,18 +4598,40 @@ main h1 {
   margin-bottom: 0;
 }
 
-.list-ideas .card .badge {
-  color: white;
+.idea-content {
+  padding: 0 5em;
+}
+
+.idea-content span {
+  font-size: 1.3em;
+  color: #818A91;
+}
+
+.idea-content p {
+  margin-top: 2em;
+  text-align: justify;
+}
+
+.idea-content .keywords {
+  margin-top: 1.8em;
+}
+
+.keywords > * {
+  margin-bottom: 1.2em;
+}
+
+.keywords :not(:last-child) {
+  margin-right: 1em;
+}
+
+.keywords .badge {
+  color: white !important;
   font-size: 0.8em;
   padding: 0.4em 0.7em;
 }
 
-.list-ideas .card .keywords > * {
-  margin-bottom: 1.2em;
-}
-
-.list-ideas .card .keywords :not(:last-child) {
-  margin-right: 1em;
+.keywords .badge:hover {
+  color: white !important;
 }
 
 /*!
