@@ -19,6 +19,11 @@ Route::get('/create_idea', function () {
     return view('create_idea');
 });
 
+Route::get('/create-idea', function () {
+    return view('pages.create_idea');
+});
+
+
 Route::get('/idea', function () {
     return view('pages.idea');
 });

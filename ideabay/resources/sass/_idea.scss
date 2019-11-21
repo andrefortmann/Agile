@@ -51,3 +51,38 @@
         }
     }
 }
+
+.form-create-idea {
+    padding: 0 5em;
+    width: 100%;
+    height: fit-content;
+
+    span {
+        font-size: 1.3em;
+        color: #818A91;
+    }
+
+    .form-label-group {
+        position: relative;
+        margin-bottom: 1rem;
+
+        &>input,
+        &>label {
+            height: 3.125rem;
+            padding: .75rem;
+        }
+
+        &>textarea {
+            resize: none;
+            height: 15em;
+        }
+    }
+
+    button {
+        padding: 0.5em 2em;
+
+        &:not(:last-child) {
+            margin-right: 1.5em;
+        }
+    }
+}
