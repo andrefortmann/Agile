@@ -51,10 +51,10 @@ class IdeasController extends Controller
         $idea->abstract = $request->input('abstract');
         $idea->description = $request->input('description');
         $idea->keyword = $request->input('keyword');
-       // $idea->user_id = auth()->user()->id;
+        $idea->user_id = auth()->user()->id;
         $idea->save();
 
-        return redirect('/create_idea')->with('success', 'Post Created');
+        return redirect('/')->with('success', 'Post Created');
     }
 
     /**

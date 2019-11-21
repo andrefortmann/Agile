@@ -21,7 +21,6 @@
 
 <body>
     @guest
-
     <div id="login-container">
         <div class="row">
             <div class="col login-banner">

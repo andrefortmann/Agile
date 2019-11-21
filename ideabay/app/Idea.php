@@ -11,7 +11,8 @@ class Idea extends Model
     public $primaryKey = 'id';
     public $timestamp = true;
 
-    public function user(){
+     public function user(){
         return $this->belongsTo('App\User');
     }
+    
 }

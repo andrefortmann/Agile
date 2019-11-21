@@ -3,26 +3,26 @@
 @section('content')
 <main>
     <h1>Create Idea</h1>
-    <form class="form-create-idea" method="POST" action="">
+    <form class="form-create-idea" method="POST" action="{{action('IdeasController@store')}}">
         @csrf
         <div class="mb-3">
             <span>Enter Details</span>
         </div>
         <div class="form-label-group required">
-            <input type="text" id="title" class="form-control" placeholder="Title" required>
-            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="Title" required>
+            <label for="title" name="title">Title</label>
         </div>
         <div class="form-label-group required">
-            <input type="text" id="abstract" class="form-control" placeholder="Abstract" required>
-            <label for="abstract">Abstract</label>
+            <input type="text" id="abstract" name="abstract" class="form-control" placeholder="Abstract" required>
+            <label for="abstract" name="abstract">Abstract</label>
         </div>
         <div class="form-label-group required">
-            <textarea id="description" class="form-control" rows="5" placeholder="Description" required></textarea>
-            <label for="description">Description</label>
+            <textarea id="description" name="description" class="form-control" rows="5" placeholder="Description" required></textarea>
+            <label for="description" name="description">Description</label>
         </div>
         <div class="form-label-group required">
-            <input type="text" id="keywords" class="form-control" placeholder="Keywords" required>
-            <label for="keywords">Keywords</label>
+            <input type="text" id="keywords" name="keyword" class="form-control" placeholder="Keywords" required>
+            <label for="keywords" name="keyword">Keywords</label>
             <small id="keywordHelpBlock" class="form-text text-muted">
                 Insert your keywords separated by commas.
             </small>
