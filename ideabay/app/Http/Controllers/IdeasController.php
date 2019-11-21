@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Idea;
+use App\User;
 
 class IdeasController extends Controller
 {
@@ -66,7 +67,8 @@ class IdeasController extends Controller
     public function show($id)
     {
         $idea = Idea::find($id);
-        return view('ideas.show')->with('idea', $idea);
+        $author = User::where('id', $idea->user_id)->get()[0];
+        return view('ideas.show', compact('idea','author'));
     }
 
     /**
