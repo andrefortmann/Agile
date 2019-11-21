@@ -4460,13 +4460,33 @@ header .btn-outline-success:hover {
   color: white !important;
 }
 
+html,
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 100% !important;
+}
+
 main {
-  padding: 3em 0 2em 0;
+  padding: 8em 0 2em 0;
 }
 
 main h1 {
   margin: 0 2em 0 2em;
   font-weight: 700;
+}
+
+footer {
+  color: #76b39d;
+  text-align: center;
+  padding: 1em 0;
+}
+
+footer p {
+  margin: 0;
 }
 
 .form-label-group > label {

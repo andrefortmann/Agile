@@ -33,12 +33,29 @@ header {
     }
 }
 
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+}
+
 main {
-    padding: 3em 0 2em 0;
+    padding: 8em 0 2em 0;
 
     h1 {
         margin: 0 2em 0 2em;
         font-weight: 700;
+    }
+}
+
+footer {
+    color: $secondary-color;
+    text-align: center;
+    padding: 1em 0;
+
+    p {
+        margin: 0;
     }
 }
 
