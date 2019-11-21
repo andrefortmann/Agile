@@ -2,14 +2,17 @@
 
 @section('content')
 
-    <h1>{{$idea->title}}</h1>
-    <h4>{{$idea->keyword}}</h4>
-    <div>
-        {{$idea->abstract}}
-    </div>
-    <div>
-        {{$idea->description}}
-    </div>
-    <small>Date of creation {{$idea->created_at}}</small>
+<main>
+        <h1>{{$idea->title}}</h1>
+        <div class="idea-content">
+            <span>Posted on {{ substr($idea->created_at, 0,10)}} by <a href="#">Author Name</a></span>
+            <p>{{$idea->description}} </p>
+            <div class="d-flex flex-wrap keywords">
+                <a href="#" class="badge badge-secondary">{{$idea->keyword}}</a>
+                <a href="#" class="badge badge-secondary">{{$idea->keyword}}</a>
+                <a href="#" class="badge badge-secondary">{{$idea->keyword}}</a>
+            </div>
+        </div>
+    </main>
     
 @endsection

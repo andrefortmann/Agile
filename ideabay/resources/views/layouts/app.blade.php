@@ -21,29 +21,29 @@
 
 <body>
     @guest
-    <div id="login-container">
-        <div class="row">
-            <div class="col login-banner">
-                <div class="d-flex justify-content-center align-items-center">
-                    <div>
-                        <h1><i class="far fa-lightbulb pr-4"></i>Ideabay</h1>
-                        <p>We bring investors and entrepreneurs together. <br> Start sharing your ideas today!</p>
+        <div id="login-container">
+            <div class="row">
+                <div class="col login-banner">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div>
+                            <h1><i class="far fa-lightbulb pr-4"></i>Ideabay</h1>
+                            <p>We bring investors and entrepreneurs together. <br> Start sharing your ideas today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-center align-items-center">
+                    
+                        @yield('content')
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="d-flex justify-content-center align-items-center">
-                    @yield('content')
-                </div>
-            </div>
         </div>
-    </div>
-
     @else
 
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
-            <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Ideabay') }}</a>
+            <a class="navbar-brand" href="{{ url('/') }}">IdeaBay</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
