@@ -18,6 +18,6 @@ $keywords_array = explode (",", $keyword);
         <a href="/ideas/{{$idea->id}}" class="btn btn-primary">Read More</a>
     </div>
     <div class="card-footer">
-        <small class="text-muted">Posted on {{ substr($idea->created_at, 0,10)}} by <a href="#">Author Name</a></small>
+        <small class="text-muted">Posted on {{ substr($idea->created_at, 0,10)}}</small>
     </div>
 </div>   
