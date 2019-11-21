@@ -31,3 +31,5 @@ Route::resource('ideas', 'IdeasController');
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'IdeasController@index');
 });
+
+Route::get('/profile', 'Profile@index');
