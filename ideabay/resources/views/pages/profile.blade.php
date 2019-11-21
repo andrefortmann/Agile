@@ -18,12 +18,18 @@
                         <table class="table table-striped">
                             <tr>
                                 <th>Title</th>
-                                <th></th>
-                                <th></th>
+                                <th>Abstract</th>
+                                <th>Description</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                             @foreach($ideas as $displayidea)
                                 <tr>
                                     <td>{{$displayidea->title}}</td>
+                                    <td>{{$displayidea->abstract}}</td>
+                                    <td>{{$displayidea->description}}</td>
+                                    <td><a href="/create-idea" class="btn btn-primary">Edit Post</a></td>
+                                    <td><a href="/create-idea" class="btn btn-primary">Delete Post</a></td>
                                 </tr>
                             @endforeach
                         </table>
