@@ -26,6 +26,6 @@ class Profile extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('pages.profile',)->with('ideas', $user->ideas);
+        return view('pages.profile')->with('ideas', $user->ideas);
     }
 }
