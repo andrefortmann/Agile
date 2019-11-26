@@ -102,6 +102,19 @@ class IdeasController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $idea = Idea::find($id);
+        
+        //Check if post exists before deleting
+        if (!isset($idea)){
+            return redirect('/profile')->with('error', 'No Ideas Found');
+        }
+
+        // Check for correct user
+        if(auth()->user()->id !==$idea->user_id){
+            return redirect('/profile')->with('error', 'Unauthorized Page');
+        }
+        $idea->delete();
+        return redirect('/profile')->with('success', 'Idea Removed');
     }
 }

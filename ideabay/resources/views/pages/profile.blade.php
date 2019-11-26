@@ -28,7 +28,12 @@
                                     <td>{{$displayidea->title}}</td>
                                     <td>{{$displayidea->abstract}}</td>
                                     <td>{{$displayidea->description}}</td>
-                                    <td><a href="/create-idea" class="btn btn-primary">Edit Post</a></td>
+                                    <td>
+                                    {!!Form::open(['action' => ['IdeasController@destroy', $displayidea->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                    {{Form::hidden('_method', 'DELETE')}}
+                                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                                    {!!Form::close()!!}
+                                    </td>
                                     <td><a href="/create-idea" class="btn btn-primary">Delete Post</a></td>
                                 </tr>
                             @endforeach
