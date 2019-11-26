@@ -20,7 +20,6 @@
                                 <th>Title</th>
                                 <th>Abstract</th>
                                 <th>Description</th>
-                                <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
                             @foreach($ideas as $displayidea)
@@ -34,7 +33,6 @@
                                     {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
                                     {!!Form::close()!!}
                                     </td>
-                                    <td><a href="/create-idea" class="btn btn-primary">Delete Post</a></td>
                                 </tr>
                             @endforeach
                         </table>
