@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 
-class Profile extends Controller
+class ProfileController extends Controller
 {
-        /**
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -22,11 +22,13 @@ class Profile extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function show()
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('pages.profile')->with('ideas', $user->ideas);
+        $ideas = $user->ideas;
+        $users = User::all();
+        return view('pages.profile', compact('ideas','users'));
     }
     
 }

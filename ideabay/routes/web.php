@@ -12,10 +12,6 @@
 */
 
 
-Route::get('/create-idea', function () {
-    return view('pages.create_idea');
-});
-
 Auth::routes();
 
 Route::resource('ideas', 'IdeasController');
@@ -26,4 +22,4 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'IdeasController@index');
 });
 
-Route::get('/profile', 'Profile@index');
+Route::get('/profile', 'ProfileController@show');

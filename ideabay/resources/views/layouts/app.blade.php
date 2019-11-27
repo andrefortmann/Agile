@@ -55,7 +55,7 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/create-idea">Create Idea</a>
+                        <a class="nav-link" href="/ideas/create">Create Idea</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/profile">Profile</a>

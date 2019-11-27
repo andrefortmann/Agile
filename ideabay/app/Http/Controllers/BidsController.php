@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Bid;
 use App\User;
 
-class Bids extends Controller
+class BidsController extends Controller
 {
     /**
      * Display a listing of the resource.

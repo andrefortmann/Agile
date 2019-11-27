@@ -16,8 +16,8 @@ class IdeasController extends Controller
     public function index()
     {
         $ideas = Idea::all();
-        //$ideas = Idea::orderBy('title', 'desc')->get();
-        return view('ideas.index')->with('ideas', $ideas);
+        $users = User::all();
+        return view('ideas.index', compact('ideas','users'));
     }
 
     /**
@@ -27,7 +27,7 @@ class IdeasController extends Controller
      */
     public function create()
     {
-        //
+        return view('ideas.create');
     }
 
     /**
