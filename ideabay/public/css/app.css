@@ -4650,6 +4650,10 @@ footer p {
   margin-bottom: 0;
 }
 
+.idea-heading button {
+  margin-right: 5em;
+}
+
 .idea-content {
   padding: 0 5em;
 }
