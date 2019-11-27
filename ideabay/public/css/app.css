@@ -4650,6 +4650,32 @@ footer p {
   margin-bottom: 0;
 }
 
+.profile-list-ideas {
+  margin-top: 2em;
+  padding: 0 5em;
+}
+
+.profile-list-ideas .card .card-header {
+  background-color: white;
+}
+
+.profile-list-ideas .card .card-title {
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.profile-list-ideas .card .card-body {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.profile-list-ideas .card .card-footer {
+  border-top: none;
+}
+
+.profile-list-ideas .card:not(:last-child) {
+  margin-bottom: 2em;
+}
+
 .idea-heading button {
   margin-right: 5em;
 }
