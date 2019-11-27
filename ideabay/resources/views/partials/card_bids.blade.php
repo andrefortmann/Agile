@@ -1,6 +1,7 @@
 <div class="card">
+    @foreach($ideas as $displayidea)
     <div class="card-header" id="ideaID">
-    @foreach($ideas as $displayidea) <!-- CHANGE THIS ID PER IDEA! -->
+     <!-- CHANGE THIS ID PER IDEA! -->
     <?php
 
     $keyword = $displayidea->keyword; 
@@ -47,7 +48,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td> Name</td>
+                        <td>Name</td>
                         <td>Message</td>
                         <td>Price</td>  
                     </tr>
@@ -55,6 +56,6 @@
             </table>
         </div>
     </div>
- @endforeach
  
+ @endforeach
 </div>
