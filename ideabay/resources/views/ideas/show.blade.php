@@ -37,20 +37,23 @@ $keywords_array = explode (",", $keyword);
             </button>
         </div>
         <div class="modal-body">
-            <form>
+            <form method="POST" action="{{action('Bids@store')}}">
+            @csrf
                 <div class="form-group">
-                    <label for="money-amount" class="col-form-label">Amount</label>
-                    <input type="number" class="form-control" id="money-amount">
+                    <label for="money-amount" class="col-form-label" name="price">Amount</label>
+                    <input type="number" class="form-control" id="money-amount" name="price">
                 </div>
                 <div class="form-group">
                     <label for="message-text" class="col-form-label">Message</label>
-                    <textarea class="form-control" id="message-text"></textarea>
+                    <textarea class="form-control" id="message-text" name="message"></textarea>
+                    <input type="hidden" name="ideaid" value="{{$idea->id}}">
                 </div>
-            </form>
+            
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
         </div>
     </div>

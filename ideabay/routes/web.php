@@ -28,6 +28,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('ideas', 'IdeasController');
 
+Route::resource('bids', 'Bids');
+
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'IdeasController@index');
 });

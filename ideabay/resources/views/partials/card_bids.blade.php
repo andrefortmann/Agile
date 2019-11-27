@@ -1,20 +1,38 @@
 <div class="card">
-    <div class="card-header" id="ideaID"> <!-- CHANGE THIS ID PER IDEA! -->
-        <h5 class="card-title">This is an idea</h5>
+    <div class="card-header" id="ideaID">
+    @foreach($ideas as $displayidea) <!-- CHANGE THIS ID PER IDEA! -->
+    <?php
+
+    $keyword = $displayidea->keyword; 
+    $keywords_array = explode (",", $keyword);  
+
+    ?>
+        <h5 class="card-title">{{$displayidea->title}}</h5>
         <div class="d-flex flex-wrap keywords">
-            <a href="#" class="badge badge-secondary">keyword</a>
-            <a href="#" class="badge badge-secondary">keyword</a>
+        @foreach ($keywords_array as $keyword_array)
+
+            <a href="#" class="badge badge-secondary">{{$keyword_array}}</a>
+                
+        @endforeach
         </div>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et convallis lectus. Vivamus scelerisque elementum purus id molestie. Duis quis augue consequat, rhoncus leo non, finibus risus. Duis luctus ultricies efficitur. Sed nec sapien vitae ex pharetra placerat quis vel ante. Suspendisse bibendum mattis laoreet. In accumsan quam ut nisl commodo consectetur non in neque. Praesent viverra sem ut mi tempus aliquet.</p>
+        <p class="card-text">{{$displayidea->description}}</p>
         
         <div class="d-flex justify-content-between">
             <!-- CHANGE COLLAPSEID PER IDEA! -->
             <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseID" aria-expanded="false" aria-controls="collapseOne">
                 Show Bids
             </button>
-            <a href="#" class="btn btn-primary">Read More</a>
+            {!!Form::open(['action' => ['IdeasController@destroy', $displayidea->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+            {{Form::hidden('_method', 'DELETE')}}
+            {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+            {!!Form::close()!!}
         </div>
+        
     </div>
+      <div class="card-footer">
+        <small class="text-muted">Posted on {{ substr($displayidea->created_at, 0,10)}}</small>
+        </div>
+   
 
     <!-- CHANGE COLLAPSEID PER IDEA -->
     <div id="collapseID" class="collapse" aria-labelledby="ideaID">
@@ -29,26 +47,14 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Mark</td>
-                        <td>This idea is very nice!</td>
-                        <td>1000 €</td>
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                        <td>I like this, please accept my bid.</td>
-                        <td>2000 €</td>
-                    </tr>
-                    <tr>
-                        <td>Nathan</td>
-                        <td>I could use this in my company.</td>
-                        <td>1400 €</td>
+                        <td> Name</td>
+                        <td>Message</td>
+                        <td>Price</td>  
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-
-    <div class="card-footer">
-        <small class="text-muted">Posted on someday</small>
-    </div>
+ @endforeach
+ 
 </div>
