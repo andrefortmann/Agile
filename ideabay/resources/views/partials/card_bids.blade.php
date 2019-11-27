@@ -47,11 +47,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Name</td>
-                        <td>Message</td>
-                        <td>Price</td>  
-                    </tr>
+                <?php
+                $id = $displayidea->id;
+                // Create connection
+                $conn = new mysqli("localhost", "root", "", "ideabay");
+                $sql = "SELECT users.name,bids.price,bids.message from bids,ideas,users where bids.idea_id=ideas.id and bids.user_id=users.id and ideas.id=$id  and users.id=(SELECT users.id from bids WHERE idea_id=$id  LIMIT 1)";
+                $result = $conn->query($sql);
+                     
+                if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                echo "<tr><td>".$row["name"]."</td><td>".$row["message"]."</td><td> ".$row["price"]."</td></tr>";
+                }
+                } else {
+                            echo "<tr><td>There are currently no bids available.</td></tr>";
+                     }
+                ?>
                 </tbody>
             </table>
         </div>
