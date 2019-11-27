@@ -16,15 +16,7 @@ Route::get('/create-idea', function () {
     return view('pages.create_idea');
 });
 
-
-// to delete
-Route::get('/idea', function () {
-    return view('pages.idea');
-});
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('ideas', 'IdeasController');
 
