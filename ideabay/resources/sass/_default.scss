@@ -21,16 +21,6 @@ header {
             color: $secondary-color !important;
         }
     }
-
-    .btn-outline-success {
-        color: $secondary-color !important;
-        border-color: $secondary-color !important;
-
-        &:hover {
-            background-color: $secondary-color !important;
-            color: white !important;
-        }
-    }
 }
 
 html,

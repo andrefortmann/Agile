@@ -4450,16 +4450,6 @@ header .nav-item a:hover {
   color: #76b39d !important;
 }
 
-header .btn-outline-success {
-  color: #76b39d !important;
-  border-color: #76b39d !important;
-}
-
-header .btn-outline-success:hover {
-  background-color: #76b39d !important;
-  color: white !important;
-}
-
 html,
 body {
   display: -webkit-box;
