@@ -15,10 +15,16 @@
         <div class="form-label-group required">
             <input type="text" id="abstract" name="abstract" class="form-control" placeholder="Abstract" required>
             <label for="abstract" name="abstract">Abstract</label>
+            <small id="keywordHelpBlock" class="form-text text-muted">
+                A short summary of your idea.
+            </small>
         </div>
         <div class="form-label-group required">
             <textarea id="description" name="description" class="form-control" rows="5" placeholder="Description" required></textarea>
             <label for="description" name="description">Description</label>
+            <small id="keywordHelpBlock" class="form-text text-muted">
+                Describe it as good as you can, all the details matter.
+            </small>
         </div>
         <div class="form-label-group required">
             <input type="text" id="keywords" name="keyword" class="form-control" placeholder="Keywords" required>
