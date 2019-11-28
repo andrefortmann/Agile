@@ -37,7 +37,7 @@ $keywords_array = explode (",", $keyword);
             </button>
         </div>
         <div class="modal-body">
-            <form method="POST" action="{{action('Bids@store')}}">
+            <form method="POST" action="{{action('BidsController@store')}}">
             @csrf
                 <div class="form-group">
                     <label for="money-amount" class="col-form-label" name="price">Amount</label>

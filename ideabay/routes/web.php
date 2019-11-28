@@ -16,7 +16,7 @@ Auth::routes();
 
 Route::resource('ideas', 'IdeasController');
 
-Route::resource('bids', 'Bids');
+Route::resource('bids', 'BidsController');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'IdeasController@index');
